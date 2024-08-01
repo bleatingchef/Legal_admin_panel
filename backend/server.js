@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cookieSession from "cookie-session";
-// import cors from "cors";
+import cors from "cors";
 // import passport from "passport"
 import userRoute from "./routes/userRoute.js";
 
@@ -24,10 +24,10 @@ app.use(express.urlencoded({extended:false}));
 // app.use(passport.initialize());
 app.use(bodyParser.json());
 
-// app.use(cors({
-//     origin:["http://localhost:5173","http://localhost:5174"],
-//     credentials:true,
-// }))
+app.use(cors({
+    origin:["http://localhost:5173","http://localhost:5174"],
+    credentials:true,
+}))
 
 app.use("/api/user", userRoute);
 
