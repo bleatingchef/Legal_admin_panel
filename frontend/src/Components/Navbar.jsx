@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import logo from "../assets/logo.png";
 import { FiUsers, FiGift, FiMenu, FiX, FiCalendar } from 'react-icons/fi';
-import { FaFolder, FaFolderOpen } from 'react-icons/fa';
+import { FaFolder, FaFolderOpen, FaGavel } from 'react-icons/fa';
 
 const Navbar = () => {
   const [sidebarExpanded, setSidebarExpanded] = useState(false);
@@ -24,12 +24,12 @@ const Navbar = () => {
     }
   };
 
-  const navigateToContact = () => {
-    navigate('/contact');
+  const navigateToUser = () => {
+    navigate('/user');
   };
 
   const navigateToMembership = () => {
-    navigate('/membership');
+    navigate('/attorneys');
   };
 
   const navigateToAppointments = () => {
@@ -106,11 +106,11 @@ const Navbar = () => {
               </ul>
             )} */}
           </li>
-          {/* <li className="flex items-center pl-2 rounded-xl hover:shadow-lg hover:shadow-yellow-500 py-3 cursor-pointer " onClick={() => { navigateToMembership(); toggleSidebar(); }}>
-            <FiGift className="h-6 w-6 mr-2 text-yellow-500" />
-            {sidebarExpanded && <span>Membership</span>}
-          </li> */}
-          <li className="flex items-center pl-2 rounded-xl hover:shadow-lg hover:shadow-yellow-500 py-3 cursor-pointer " onClick={() => { navigateToContact(); toggleSidebar(); }}>
+          <li className="flex items-center pl-2 rounded-xl hover:shadow-lg hover:shadow-yellow-500 py-3 cursor-pointer " onClick={() => { navigateToMembership(); toggleSidebar(); }}>
+            <FaGavel className="h-6 w-6 mr-2 text-yellow-500" />
+            {sidebarExpanded && <span>Attorneys</span>}
+          </li>
+          <li className="flex items-center pl-2 rounded-xl hover:shadow-lg hover:shadow-yellow-500 py-3 cursor-pointer " onClick={() => { navigateToUser(); toggleSidebar(); }}>
             <FiUsers className="h-6 w-6 mr-2 text-yellow-500" />
             {sidebarExpanded && <span>Users</span>}
           </li>

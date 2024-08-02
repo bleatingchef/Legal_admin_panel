@@ -7,6 +7,7 @@ import cookieSession from "cookie-session";
 import cors from "cors";
 // import passport from "passport"
 import userRoute from "./routes/userRoute.js";
+import appointmentRoute from"./routes/appointmentRoute.js"
 
 
 dotenv.config()
@@ -30,6 +31,9 @@ app.use(cors({
 }))
 
 app.use("/api/user", userRoute);
+app.use('/api/appoint',appointmentRoute)
+app.use('/api/delete',appointmentRoute)
+
 
 const PORT = process.env.PORT||5000;
 

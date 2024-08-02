@@ -5,14 +5,13 @@ import axios from "axios";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import AdminTable from './Components/AdminTable';
 import AdminProfile from './Components/AdminProfile';
 import Dashboard from './Components/Dashboard';
-import Membership from './Components/Membership';
-import CalendarComponent from './Components/Appointments';
 import './index.css';
 import Appointments from './Components/Appointments';
 import Cases from './Components/Cases';
+import Attorneys from './Components/Attorneys';
+import User from './Components/User';
 
 const App = () => {
   const url = import.meta.env.VITE_BACKEND_URL;
@@ -35,10 +34,10 @@ const App = () => {
         <Route path='/logout' element={<Login />} />
         <Route element={auth ? <Layout /> : <Navigate to='/login' />}>
           <Route path='/' element={<Dashboard/>} />
-          <Route path='/contact' element={<AdminTable />} />
+          <Route path='/User' element={<User/>} />
           <Route path='/profile' element={<AdminProfile/>}/>
           <Route path='/home' element={<Dashboard/>}/>
-          <Route path='/membership' element={<Membership/>}/>
+          <Route path='/attorneys' element={<Attorneys/>}/>
           <Route path='/appointments' element={<Appointments/>}/>
           <Route path='/cases' element={<Cases/>}/>
 
