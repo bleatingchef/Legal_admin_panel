@@ -103,7 +103,7 @@ const LawyerProfile = ({ lawyer }) => (
 const Attorneys = () => (
     <>
     <div className="text-center mx-auto pl-24 pt-8">
-            <h1 className='inline-block hover:text-5xl hover:mb-0 text-yellow-500 hover:text-yellow-200 text-3xl md:text-7xl'>Attorneys</h1>
+            <h1 className='inline-block text-yellow-500 hover:text-yellow-300 text-3xl md:text-7xl'>Attorneys</h1>
         </div>
   <div className="min-h-screen flex pl-36 flex-col items-center p-8">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">

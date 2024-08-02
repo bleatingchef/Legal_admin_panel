@@ -50,7 +50,7 @@ const User = () => {
   return (
     <>
       <div className="text-center mx-auto pt-8">
-        <h1 className='inline-block hover:text-5xl hover:mb-0 text-yellow-500 hover:text-yellow-200 text-3xl md:text-7xl'>Users</h1>
+        <h1 className='inline-block text-yellow-500 hover:text-yellow-300 text-3xl md:text-7xl'>Users</h1>
       </div>
       <div className="flex pt-20 justify-center min-h-screen">
         {/* Main Content */}

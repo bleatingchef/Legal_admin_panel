@@ -29,8 +29,8 @@ const Cases = () => {
 
     return (
         <>
-        <div className="text-center mx-auto pl-60 pt-8">
-            <h1 className='inline-block hover:text-5xl hover:mb-0 text-yellow-500 hover:text-yellow-200 text-3xl md:text-7xl'>Cases</h1>
+        <div className="text-center mx-auto pl-40 pt-8">
+            <h1 className='inline-block  text-yellow-500 hover:text-yellow-300 text-3xl md:text-7xl'>Cases</h1>
         </div>
             <div className="flex justify-center items-center min-h-screen bg-slate-950 ">
                 <div className="container mx-auto p-10" style={{ marginLeft: '320px' /* Adjust this value based on your sidebar width */ }}>

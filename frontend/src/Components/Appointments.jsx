@@ -23,7 +23,7 @@ const appointments = [
 const Appointments = () => {
   return (
     <><div className="text-center mx-auto pl-40 pt-8">
-    <h1 className='inline-block hover:text-5xl hover:mb-0 text-yellow-500 hover:text-yellow-200 text-3xl md:text-7xl'>Appointments</h1>
+    <h1 className='inline-block text-yellow-500 hover:text-yellow-300 text-3xl md:text-7xl'>Appointments</h1>
 </div>
     <div className="flex justify-center items-center min-h-screen ml-32 bg-slate-950 text-white">
       

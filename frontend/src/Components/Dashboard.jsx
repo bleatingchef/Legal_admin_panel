@@ -29,8 +29,8 @@ const Dashboard = () => {
 
   return (
     <div className='bg-slate-900'>
-      <div className="text-center md:ml-80 pb-2 pt-8">
-        <h1 className='inline-block hover:text-5xl hover:mb-0 text-yellow-500 hover:text-yellow-200 text-3xl md:text-7xl'>Dashboard</h1>
+      <div className="text-center md:ml-24 pb-2 pt-8">
+        <h1 className='inline-block text-yellow-500 hover:text-yellow-300 text-3xl md:text-7xl'>Dashboard</h1>
       </div>
 
       <div className="p-8 min-h-screen">

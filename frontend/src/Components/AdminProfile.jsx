@@ -20,15 +20,15 @@ const AdminProfile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/getuser`, { withCredentials: true });
-        const userData = response.data;
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/getUser`, { withCredentials: true });
+        const data = response.data;
         setAdmin(prevAdmin => ({
           ...prevAdmin,
-          email: userData.email,
-          name: userData.username,
+          email: data.email,
+          name: data.username,
         }));
-        setName(userData.username);
-        setEmail(userData.email);
+        setName(data.username);
+        setEmail(data.email);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -66,10 +66,10 @@ const AdminProfile = () => {
   };
 
   return (
-    <div className="flex justify-center p-20 items-center">
-      <div className="bg-cyan-300 p-10 pt-10 rounded-3xl outline outline-4 bg-opacity-50 outline-cyan-500 shadow shadow-lg shadow-cyan-500 h-full w-full max-w-xl">
+    <div className="flex justify-center min-h-screen p-20 items-center">
+      <div className="bg-slate-950 p-10 pt-10 rounded-3xl outline outline-4 bg-opacity-50 outline-yellow-500 shadow shadow-lg shadow-yellow-500 h-full w-full max-w-xl">
         <div className="relative flex flex-col items-center">
-          <img className="w-40 h-40 outline outline-4 outline-cyan-500 shadow shadow-xl shadow-black rounded-full object-cover mb-4" src={image} alt="Admin" />
+          <img className="w-40 h-40 outline outline-4 outline-yellow-500 shadow shadow-lg shadow-yellow-500 rounded-full object-cover mb-4" src={image} alt="Admin" />
           <label className="absolute bottom-40 right-32 bg-white p-2 rounded-full shadow-md cursor-pointer">
             <FaPencilAlt className="  text-gray-700" />
             <input
@@ -83,33 +83,33 @@ const AdminProfile = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="mt-4">
-            <label className="block text-lg font-medium text-black">Name</label>
+            <label className="block text-lg font-medium text-yellow-500">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-5 block w-full rounded-3xl border-base-300 p-2 shadow-2xl focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              className="mt-5 block w-full rounded-3xl border-base-300 bg-yellow-500 bg-opacity-80 text-black font-semibold p-2 shadow-2xl focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
             />
           </div>
           <div className="mt-4">
-            <label className="block text-lg font-medium text-black">Email</label>
+            <label className="block text-lg font-medium text-yellow-500">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-5 block w-full rounded-3xl border-base-300 p-2 shadow-2xl focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              className="mt-5 block w-full rounded-3xl border-base-300 p-2 shadow-2xl bg-yellow-500 bg-opacity-80 text-black font-semibold focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
             />
           </div>
           <button
             onClick={updateUser}
-            className="mt-6 ml-40 bg-base-300 hover:bg-cyan-500 hover:outline hover:text-xl hover:outline-white shadow-lg shadow-black hover:text-black text-white font-bold py-2 px-4 rounded-3xl"
+            className="mt-6 ml-40 bg-yellow-500 hover:bg-yellow-500 hover:outline hover:outline-yellow-500 shadow-lg shadow-black text-black font-bold py-2 px-4 rounded-3xl"
           >
             Save & Update
           </button>
         </form>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="mt-8 ml-40 bg-red-500 hover:bg-red-600 shadow-lg hover:text-xl hover:outline hover:outline-white shadow-black hover:text-black text-white font-bold py-2 px-4 rounded-3xl"
+          className="mt-8 ml-40 bg-red-500 shadow-lg hover:outline hover:outline-yellow-500 shadow-black text-black font-bold py-2 px-4 rounded-3xl"
         >
           Reset Password
         </button>
